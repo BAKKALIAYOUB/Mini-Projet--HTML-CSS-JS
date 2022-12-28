@@ -1,0 +1,279 @@
+body {
+    height: 150vh;
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+.volet1{
+    background-color:rgb(32, 13, 63);
+    height: 142px;
+}
+.volet1 ul li{
+    display:inline-block;
+    width: 140px;
+    text-align: center;
+    line-height: 50px; 
+    list-style: none;
+}
+.volet1 a{
+    color: white;
+}
+.volet1 ul li:hover{
+    background-color: #273157;
+}
+header ul {
+    padding: 50px;
+    display: flex;
+    position: absolute;
+    padding-left: 250px;
+}
+.ul2{
+    display: none;
+    position: relative;
+    background-color:rgb(192, 115, 109);
+    padding: 0;
+    z-index: 1000;
+}
+.ul2 li{
+    color: white;
+    cursor: pointer;
+}
+.ul1{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-left:400px ;
+}
+.ul1 li{
+    color: white;
+    cursor: pointer;
+    width: 200px;
+}
+.ul3{
+    display: none;
+    position: relative;
+    background-color:rgb(192, 115, 109);
+    padding: 0;
+    z-index: 1000;
+}
+
+.volet1 ul li:hover .ul2{
+    display: block;
+}
+.volet1 ul li:hover .ul3{
+    display: block;
+}
+
+
+.volet2{
+    backdrop-filter: blur(40px);
+    text-align: center;
+    width: 210px;
+
+    margin: 20px 20px 0 0;
+    height: 1000px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.volet2 ul{
+    text-align: justify;
+    list-style-type:none;
+    line-height: 3;
+}
+.volet2 ul a{
+    font-style: italic;
+}
+.volet2 img{
+    width: 30px;
+    border-radius: 25%;
+}
+.volet3{
+    backdrop-filter: blur(60px);
+    margin: 0 0 20px 0;
+    width: 700px;
+    height: 500px;
+}
+.volet4{
+    backdrop-filter: blur(80px);
+    width:700px;
+    min-height: 481px;
+    max-height: auto;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.volet4 img{
+    width: 500px;
+    height: 380px;
+}
+
+#contenueVolet4{
+    display: none;
+}
+
+#volet5{
+    backdrop-filter: blur(60px);
+    color: white;
+    margin: 20px 0 0 0;
+    width: 250px;
+    max-height: 1000px;
+}
+
+#volet5 img{
+    padding: 10px;
+    width: 230px;
+}
+#volet5 p{
+    padding: 10px;
+}
+.grpA{
+    display: none;
+}
+.grpB{
+    display: none;
+}
+.grpC{
+    display: none;
+}
+.grpD{
+    display: none;
+}
+.grpE{
+    display: none;
+}
+.grpF{
+    display: none;
+}
+.grpG{
+    display: none;
+}
+.grpH{
+    display: none;
+}
+.div2{
+    padding: 0px;
+    padding-top: 0;  
+    display: flex;
+    flex-direction:row;  
+    visibility: hidden;
+    width: 100%;
+
+}
+
+.div3{
+    display: flex;
+    flex-direction:column;
+
+    margin: 20px 20px 20px 0;
+}
+
+.logo2{
+    float: left;
+    height: auto;
+    width: 250px;
+}
+
+#quatar , #paysbas , #england , #usa , #argentina , #maroc , #france , #australia{
+    display: none;
+}
+
+
+footer{
+    backdrop-filter: blur(60px);
+    color: white;
+    height: 142px;
+}
+
+marquee a{
+    padding-left: 80px;
+    
+}
+
+#detailsActualite{
+    backdrop-filter: blur(60px);
+    color: white;
+    width: 930px;
+    height: 1000px;
+    z-index: 500;
+    position:absolute;
+    top: 279px;
+    display: none;
+}
+#detail2,#detail1{
+    padding: 20px;
+    font-size: 20px;
+    display: none;
+}
+
+#detail2 h1 , #detail1 h1{
+    padding: 20px;
+    color: #273157;
+}
+
+#ads1 img{
+    width: 930px;
+    height: 500px;
+}
+
+#cursor{
+    cursor: pointer;
+}
+
+input[type=radio]{
+    cursor: pointer;
+}
+
+.div3 input{
+    margin-top: 40px;
+}
+
+.div3 input[type=button]{
+    background-color: #273157;
+    border: none;
+    color:  white;
+    padding: 15px 32px; 
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.volet4 input[type=button]{
+    background-color: #273157;
+    border: none;
+    padding: 10px;
+    color: white;
+}
+#Players{
+    z-index: 200;
+}
+
+#Players input[type=button]{
+    margin: 20px 0 0 0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+#classement{
+    display: none;
+}
+
+area{
+    cursor: pointer;
+}
+
+marquee img{
+    width: 200px;
+    height: 100px;
+}
+
+#Matchs{
+    display: none;
+}
+
+#Fomrulairemodifier{
+    display: none;
+}

@@ -1,0 +1,35 @@
+#tableclassement {
+    width:700px;
+}
+#tableclassement th ,#tableclassement td {
+    padding: 15px;
+}
+#tableclassement td{
+    text-align: left;
+}
+#tableclassement tr:nth-child(2n){
+    background-color:#273157;
+}
+#more{
+    display: none;
+}
+
+#imgclassement{
+    width: 90px;
+    padding: 0;
+}
+
+#tableclassement img{
+    width: 20px;
+    height: 15px;
+
+    border-radius: 10px;
+}
+
+#classement{
+    display: "none";
+}
+
+     
+         
+

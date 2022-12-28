@@ -1,0 +1,77 @@
+#Players table tr td img{
+    width: 80px;
+    height: 60px;
+    border-radius: 30%;
+}
+
+#lesjoueurs{
+    border: 10px outset;
+    background-color: whitesmoke;
+    width: 700px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: auto;
+}
+
+#Players h1{
+    text-align: center;
+    color: #273157;
+
+}
+
+
+table {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+  
+td{
+    padding: 10px;
+    border-bottom: 2px solid #273157;
+    border-top: 2px solid #273157;
+    text-align: center;
+}
+
+
+table td a{
+    display: inline-block;
+}
+
+
+#Usatb , #Maroctb, #PaysBastb , #Englandtb , #Quatartb{
+    display: none;
+}
+
+
+
+#TarikSalman , #Yousofhassan ,#MussabKadir , #AliAssadalla ,#AhmedAlaa{
+    display: none;
+}
+#Pasveer ,#Ake , #VanDijk, #DeJonk{
+    display: none;
+}
+#Bellingham,#Kane , #Fodeen , #Grealish{
+    display: none;
+}
+#Ziyech, #Hakimi , #Boufal , #Amallah, #Ounahi{
+    display: none;
+}
+#Pulisic ,#Adams , #Reyana , #Weah,#Musah{
+    display: none;
+    
+}
+
+.FicheTechnique img{
+    width: 100px;
+    height: 70px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.FicheTechnique h1{
+    margin: 10px;
+}
+

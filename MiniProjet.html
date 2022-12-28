@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/MiniProjet.css">
+    <link rel="stylesheet" href="./css/volet4.css">
+    <link rel="stylesheet" href="./css/FormulaireVolet4.css">
+    <link rel="stylesheet" href="./css/classement.css">
+    <link rel="stylesheet" href="./css/volet6.css">
+    <link rel="stylesheet" href="./css/match.css">
+    <script src="./JavaScript/ReduiretAlonger.js"></script>
+    <script src="./JavaScript/Volet2.js"></script>
+    <script src="./JavaScript/Volet3.js"></script>
+    <script src="./JavaScript/Volet4.js"></script>
+    <script src="./JavaScript/Volet5.js"></script>
+    <script src="./JavaScript/FicheTechnique.js"></script>
+    <script src="./JavaScript/classement.js"></script>
+    <script src="./JavaScript/Ads.js"></script>
+    <script src="./JavaScript/match.js"></script>
+    <script src="./JavaScript/Editer.js"></script>
+    <title>FIFA World Cup</title>
+
+</head>
+<body>
+    <!----------------------------------------------------------------------------------Volet1----------------------------------------------------------------------------------------------------------------------------->
+    <header class="volet1">
+        <img src="./images/logo.png" alt="Logo" class="logo2" width="350px">
+        <ul class="ul1">
+            <li id="acceuil" onclick="afficheracceuil()">Accueil</li>
+            <li>
+                Groupes
+                <ul class="ul2">
+                    <li onclick="afficherGrpA()">Groupe A</li>
+                    <li onclick="afficherGrpB()">Groupe B</li>
+                    <li onclick="afficherGrpC()">Groupe C</li>
+                    <li onclick="afficherGrpD()">Groupe D</li>
+                    <li onclick="afficherGrpE()">Groupe E</li>
+                    <li onclick="afficherGrpF()">Groupe F</li>
+                    <li onclick="afficherGrpG()">Groupe G</li>
+                    <li onclick="afficherGrpH()">Groupe H</li>  
+                </ul>
+            </li>
+            <li>
+                Matchs
+                <ul class="ul3">
+                    <li onclick="afficher20nov()"><a href="#matchdate1">Dimanche 20/11</a></li>
+                    <li onclick="afficher21nov()"><a href="#matchdate2">Lundi 21/11</a></li>
+                    <li onclick="afficher22nov()"><a href="#matchdate3">Mardi 22/11</a></li>
+                    <li onclick="afficher23nov()"><a href="#matchdate4">Mercredi 23/11</a></li>
+                    <li onclick="afficher24nov()"><a href="#matchdate5">Jeudi 24/11</a></li>
+                    <li onclick="afficher25nov()"><a href="#matchdate6">Vendredi 25/11</a></li>
+                    <li onclick="afficher26nov()"><a href="#matchdate7">Samedi 26/11</a></li>
+                    <li onclick="afficher27nov()"><a href="#matchdate8">Dimanche 27/11</a></li> 
+                </ul>
+            </li>
+            <li onclick="AfficherClassement()"><a href="#classement">Classements</a></li>
+        </ul>
+    </header>
+
+    <marquee behavior="scroll" direction="right">
+        <img src="./images/Ads1.png" alt="ads1">
+        <img src="./images/Ads2.jpg" alt="ads2">
+        <img src="./images/Ads3.jpg" alt="ads3">
+        <img src="./images/Ads4.png" alt="ads4">
+        <img src="./images/Ads5.jpg" alt="ads5">
+    </marquee>
+
+    
+    <div class="div2" id="div2">
+        <!----------------------------------------------------------------------------------Volet2----------------------------------------------------------------------------------------------------------------------------->
+        <div class="volet2" id="volet2" ondblclick="reduire()" onclick="allonger()">
+            <div class="grpA" id="grpA">
+                    <h1>Groupe A</h1>
+                <ul>
+                    <li onclick="afficherimgQuatar()" id="cursor"><img src="./images/Qatar Logo.jpg" alt="groupeA" class="quatar" > <a>Qatar</a></li>
+                    <li><img src="./images/Equateur.jpg" alt="groupeA" class="equateur" onclick=""> <a>Equateur</a></li>
+                    <li><img src="./images/Senegal.png" alt="groupeA" class="senegal" onclick=""><a>Sénégal</a></li>
+                    <li onclick="afficherimgPaysBas()" id="cursor"><img src="./images/Pays bas.png" alt="groupeA" class="paysbas" onclick=""><a>Pays Bas</a></li>
+                </ul>
+            </div>
+            <div class="grpB" id="grpB">
+                <h1>Groupe B</h1>
+                <ul>
+                    <li onclick="afficherimgEngland()" id="cursor"><img src="./images/england.png" alt="groupeB" class="england"> <a>England</a></li>
+                    <li ><img src="./images/iran.png" alt="groupeB" class="iran"> <a>IR Iran</a></li>
+                    <li onclick="afficherimgUsa()" id="cursor"><img src="./images/usa.png" alt="groupeB" class="usa"><a>USA</a></li>
+                    <li><img src="./images/wales.jpg" alt="groupeB" class="wales"><a>Wales</a></li>
+                </ul>
+            </div>
+            <div class="grpC" id="grpC">
+                <h1>Groupe C</h1>
+            <ul>
+                <li onclick="afficherimgArgentina()" id="cursor"><img src="./images/argentine.png" alt="groupeC" class="argentine"> <a>Argentine</a></li>
+                <li><img src="./images/saudi.png" alt="groupeC" class="saudi"> <a>Saudi Arabia</a></li>
+                <li><img src="./images/mexico.png" alt="groupeC" class="mexico"><a>Mexico</a></li>
+                <li><img src="./images/poland.png" alt="groupeC" class="poland"><a>Poland</a></li>
+            </ul>
+            </div>
+            <div class="grpD" id="grpD">
+                <h1>Groupe D</h1>
+            <ul>
+                <li onclick="afficherimgFrance()" id="cursor"><img src="./images/france.png" alt="groupeD" class="france"><a>France</a></li>
+                <li onclick="afficherimgAustralie()" id="cursor"><img src="./images/Australia.webp" alt="groupeD" class="Australia"><a>Australia</a></li>
+                <li><img src="./images/denmark.png" alt="groupeD" class="denmark"><a>Denmark</a></li>
+                <li><img src="./images/tunisia.png" alt="groupeD" class="tunisia"><a>Tunisia</a></li>
+            </ul>
+            </div>
+            <div class="grpE" id="grpE">
+                <h1>Groupe E</h1>
+            <ul>
+                <li><img src="./images/spain.webp" alt="groupeE" class="spain"><a>Spain</a></li>
+                <li><img src="./images/costrica.webp" alt="groupeE" class="costrica"><a>Costa Rica</a></li>
+                <li><img src="./images/germany.webp" alt="groupeE" class="germany"><a>Germany</a></li>
+                <li><img src="./images/japan.png" alt="groupeE" class="japan"><a>Japan</a></li>
+            </ul>
+            </div>
+            <div class="grpF" id="grpF">
+                <h1>Groupe F</h1>
+            <ul>
+                <li><img src="./images/Belgium.png" alt="groupeF" class="Belgium"><a>Belgium</a></li>
+                <li><img src="./images/canada.png" alt="groupeF" class="canada"><a>Canada</a></li>
+                <li onclick="afficherimgMaroc()" id="cursor"><img src="./images/morcco.png" alt="groupeF" class="morocco"><a>Morocco</a></li>
+                <li><img src="./images/croatia.png" alt="groupeF" class="croatia"><a>Croatia</a></li>
+            </ul>
+            </div>
+            <div class="grpG" id="grpG">
+                <h1>Groupe G</h1>
+            <ul>
+                <li><img src="./images/brazil.png" alt="groupeG" class="brazil"><a>Brazil</a></li>
+                <li><img src="./images/serbia.webp" alt="groupeG" class="serbia"><a>Serbia</a></li>
+                <li><img src="./images/Switzerland.webp" alt="groupeG" class="Switzerland"><a>Switzerland</a></li>
+                <li><img src="./images/Cameroon.png" alt="groupeG" class="Cameroon"><a>Cameroon</a></li>
+            </ul>
+            </div>
+            <div class="grpH" id="grpH">
+                <h1>Groupe H</h1>
+            <ul>
+                <li><img src="./images/Portugal.webp" alt="groupeH" class="Portugal"><a>Portugal</a></li>
+                <li><img src="./images/Ghana.webp" alt="groupeH" class="Ghana"><a>Ghana</a></li>
+                <li><img src="./images/Uruguay.webp" alt="groupeH" class="Uruguay"><a>Uruguay</a></li>
+                <li><img src="./images/SouthKorea.png" alt="groupeH" class="korearepublic"><a>Korea Republic</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="div3" id="div3">
+            <!----------------------------------------------------------------------------------Volet3----------------------------------------------------------------------------------------------------------------------------->
+            <div class="volet3">
+                <div id="quatar">
+                    <img src="./groupes/qatar team1.png"  usemap="#qatarteam" alt="qatarteam">
+    
+                    <map name = "qatarteam">
+                        <area shape="rect" coords="201,116,328,142" onclick="AfficherTarickSalman()" title="Tarik Salman">
+                        <area shape="rect" coords="531,116,659,137" onclick="AfficherYousofhassan()" title="Yousof Hassan" >
+                        <area shape="rect" coords="28,283,150,304" onclick="AfficherMussabKadir()" title="player5"  >
+                        <area shape="rect" coords="362,283,487,307" onclick="AfficherAliAssadalla()" title="Ali Assadalla" >
+                        <area shape="rect" coords="534,282,659,308" onclick="AfficherAhmedAlaa()" title="Ahmed Alaa" >
+                    </map>
+                </div>
+             
+                <div id="paysbas">
+                    <img src="./groupes/Pays-bas.jpg" usemap="#paysbaspeam" alt ="paysbas"> 
+            
+                    <map name="paysbaspeam">
+                        <area shape="rect" coords="198,162,292,216" onclick="AfficherDejonk()" title="Dejonk" >
+                        <area shape="rect" coords="136,278,232,331" onclick="AfficherAke()" title="Ake" >
+                        <area shape="rect" coords="300,280,396,331" onclick="AfficherVanDijk()" title="Van Dijk" >
+                        <area shape="rect" coords="302,401,388,450" onclick="AfficherPasveer()" title="Pasver" > 
+                    
+                    </map>
+                </div>
+            
+                <div id="england">
+                    <img src="./groupes/englandteam (2).jpg" usemap="#englandteam" alt="england">
+            
+                    <map name="englandteam">
+                        <area shape="rect" coords="160,308,280,328" onclick="AfficherBellingham()" title="Bellingham">
+                        <area shape="rect" coords="495,310,612,328" onclick="AfficherFodeen()" title="Fodeen">
+                        <area shape="rect" coords="322,453,452,472" onclick="AfficherKane()" title="Kane">
+                        <area shape="rect" coords="499,429,630,451" onclick="AficherGrealish()" title="Grealish">
+                    </map>
+                </div>
+            
+                <div id="usa">
+                    <img src="./groupes/usateam (1).jpeg" usemap="#usateam" alt="usa">
+                    <map name="usateam">
+                        <area shape="rect" coords="143,80,241,97" onclick="AfficherPulisic()"  title="Pulisic">
+                        <area shape="rect" coords="308,138,396,153" onclick="AfficherReyana()"  title="Reyana">
+                        <area shape="rect" coords="470,80,552,96" onclick="AfficherWeah()"  title="Weah">
+                        <area shape="rect" coords="134,194,223,210" onclick="AfficherMusah()" title="Musah">
+                        <area shape="rect" coords="304,258,398,274" onclick="AfficherAdams()" title="Adams">
+
+                    </map>
+                </div>
+                       
+                <div id="maroc">
+                    <img src="./groupes/marocteam.jpeg" usemap="#marocteam" alt="maroc">
+                    <map name="marocteam">
+                        <area shape="rect" coords="134,106,237,122" onclick="AfficherBoufal()" title="Boufal">
+                        <area shape="rect" coords="458,107,564,124" onclick="AfficherZiyech()" title="Ziyech">
+                        <area shape="rect" coords="149,204,254,219" onclick="AfficherAmallah()" title="Amallah">
+                        <area shape="rect" coords="463,204,567,219" onclick="AfficherOunahi()" title="Ounahi">
+                        <area shape="rect" coords="556,322,658,334" onclick="AfficherHakimi()" title="Hakimi">
+                    </map>
+                </div>
+
+            </div>
+            <!----------------------------------------------------------------------------------Volet4-------------------------------------------------------------------------------------------------------->          
+            <div class="volet4" id="volet4">                  
+                <div id="Players">
+                    <div id="lestableauEquipe">
+                        <div id="Quatartb">
+                            <h1>Les Joueurs De Qatar</h1>
+                           <table cellspacing="0" cellpadding="2"  width="100%" id="tbQuatar">
+                               <tr id="tariksalman">
+                                   <td><img src="./images/ImageVolet4/Tarik Salman.jpg" alt="Tarik Salman" class="Tarik Salman" ><a>Tarik Salman</a></td>
+                                   <td>Tarek Salman Suleiman Odeh born 5 December 1997 is a Qatari footballer who plays as a midfielder for Qatari Club side Al Sadd and the Qatar national team.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                           
+                               <tr id="yousofhassan">
+                                   <td><img src="./images/ImageVolet4/Yousof Hassan.jpg" alt="Yousof Hassan" class="Yousof Hassan" ><a>Yousof Hassan</a></td>
+                                   <td>Youssif Hassan Youssif Al-Zoghbi born 15 July 1999 is an Egyptian footballer who plays for Al Nasr.He is a graduate of the Zamalek youth academy. Hassan's debut with first team was in the 2012–2013 season.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr id="MssabKhdir">
+                                   <td><img src="./images/ImageVolet4/Musaab Khidir.jpg" alt="Musaab Khidir" class="Musaab Khidir" ><a>Musaab Khidir</a></td>
+                                   <td>Musaab Khidir est un arrière droit de 29 ans originaire du Qatar. Musaab Khidir joue pour l’équipe de Ligue des champions de l’AFC Al Sadd SC </td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                               
+                               <tr>   
+                                   <td><img src="./images/ImageVolet4/Ali Assadalla.png" alt="Ali Assadalla" class="Ali Assadalla"><a>Ali Assadalla</a></td>
+                                   <td>Ali Assadalla born 19 January 1993, also known simply as Ali Asad, is a Qatari footballer who currently plays for Al Sadd as a midfielder. He also currently plays for the Qatar national team</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                    </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                    </td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Ajouter" onclick="AjouterNouvelleElement()">
+                       </div>
+                   
+                       <div id="PaysBastb">
+                           <h1>Les Joueurs Des Pays_Bas</h1>
+                           <table cellspacing="0" cellpadding="2"  width="100%" id="paysbastableau">
+                               <tr id="Pasver">
+                                   <td ><img src="./images/ImageVolet4/Pasveer.jpg" alt="Pasveer" class="Pasveer"><a>Pasveer</a></td>
+                                   <td>Remko Pasveer est un footballeur international néerlandais, né le 8 novembre 1983 à Enschede aux Pays-Bas. Il évolue actuellement en Eredivisie à l'Ajax Amsterdam comme gardien de but.</td>
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr id="ake">
+                                   <td ><img src="./images/ImageVolet4/Ake.jpg" alt="Ake" class="Ake"><a>Ake</a></td>
+                                   <td> Nathan Benjamin Aké (born 18 February 1995) is a Dutch professional footballer who plays as a defender for Premier League club Manchester City and the Netherlands national team. Although he predominantly plays as a centre-back, he has also been deployed as a left-back</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td ><img src="./images/ImageVolet4/Van Dijk.jpg" alt="Van Dijk" class="Van Dijk"><a>Van Dijk</a></td>
+                                   <td>Virgil van Dijk, né le 8 juillet 1991 à Bréda aux Pays-Bas, est un footballeur international néerlandais qui évolue au poste de défenseur central au Liverpool FC.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/De Jonk.jpg" alt="De Jonk" class="De Jonk"><a>De Jonk</a></th>
+                                   <td>Frenkie de Jong, né le 12 mai 1997 à Arkel aux Pays-Bas, est un footballeur international néerlandais. </td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                           </table>
+                           <input type="button" value="Ajouter" onclick="AjouterNouvelleElement()">
+                       </div>
+                   
+                       <div id="Englandtb">
+                           <h1>Les Joueurs D'Angletaire</h1>
+                           <table cellspacing="0" cellpadding="2"  width="100%" id="englandtableau">
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Bellingham.jpg" alt="Bellingham" class="Bellingham"><a>Bellingham</a></td>
+                                   <td>Jude Bellingham, né le 29 juin 2003 à Stourbridge, est un footballeur international anglais qui évolue au poste de milieu de terrain au Borussia Dortmund</td>
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/kane - Copy.jpg" alt="kane" class="kane"><a>kane</a></td>
+                                   <td> Pour les articles homonymes, voir Kane. Harry Kane, né le 28 juillet 1993 à Walthamstow en Angleterre, est un footballeur international anglais qui évolue au poste d'attaquant à Tottenham Hotspur.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Foden.jpg" alt="Foden" class="Foden"><a>Foden</a></td>
+                                   <td>Philip Foden, dit Phil Foden, né le 28 mai 2000 à Stockport, est un footballeur international anglais qui évolue au poste de milieu offensif à Manchester City. Il est le premier joueur né dans les années 2000 à marquer en Premier League.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Grealish.jpg" alt="Grealish" class="Grealish"><a>Grealish</a></td>
+                                   <td>Jack Grealish, né le 10 septembre 1995 à Birmingham (Angleterre), est un footballeur international anglais qui évolue au poste de milieu de terrain à Manchester City.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                           </table>
+                           <input type="button" value="Ajouter" onclick="AjouterNouvelleElement()">
+                       </div>
+                   
+                       <div id="Maroctb">
+                           <h1>Les Joueurs De Maroc</h1>
+                           <table cellspacing="0" cellpadding="2"  width="100%" id="marocTableau">
+                               <tr id="maroc">
+                                   <td><img src="./images/ImageVolet4/Ziyech (2).jpg" alt="Ziyech" class="Ziyech"><a>Ziyech</a></td>
+                                   <td>Hakim Ziyech, né le 19 mars 1993 à Dronten, est un footballeur international marocain évoluant au poste d'ailier droit ou de milieu offensif à Chelsea. Ziyech est connu pour être un joueur technique doté d'une excellente vista et d'une très belle qualité de passe.</td>
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Hakimi.jpg" alt="Hakimi" class="Hakimi"><a>Hakimi</a></td>
+                                   <td>Achraf Hakimi, né le 4 novembre 1998 à Madrid, est un footballeur international marocain évoluant au poste d'arrière droit au Paris Saint-Germain. </td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Boufal.jpg" alt="Boufal" class="Boufal"><a>Boufal</a></td>
+                                   <td>Sofiane Boufal, né le 17 septembre 1993 à Paris, est un footballeur international marocain qui évolue au poste d'ailier gauche ou de milieu offensif au sein du club de l'Angers SCO. </td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                               
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Ounahi.jpg" alt="Ounahi" class="Ounahi"><a>Ounahi</a></td>
+                                   <td>Azzedine Ounahi, né le 19 avril 2000 à Casablanca au Maroc, est un footballeur international marocain qui évolue au poste de milieu central au Angers SCO.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                           </table>
+                           <input type="button" value="Ajouter" onclick="AjouterNouvelleElement()">
+                       </div>
+                   
+                       <div id="Usatb">
+                           <h1>Les Joueurs De USA</h1>
+                           <table cellspacing="0" cellpadding="2"  width="100%" id="usaTableau">
+                               <tr id="usa">
+                                   <td><img src="./images/ImageVolet4/Pulisic.jpg" alt="Pulisic" class="Pulisic"><a>Pulisic</a></td>
+                                   <td>Christian Mate Pulisic, né le 18 septembre 1998 à Hershey en Pennsylvanie, est un joueur international américain de soccer qui évolue au poste d'ailier au Chelsea FC</td>
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                       
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Adams.jpg" alt="Adams" class="Adams"><a>Adams</a></td>
+                                   <td>Tyler Shaan Adams, né le 14 février 1999 à New York, est un joueur international américain de soccer. Il joue actuellement au poste de milieu de terrain à Leeds United</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                  
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                       
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Reyna.jpg" alt="Reyna" class="Reyna"><a>Reyna</a></td>
+                                   <td>Giovanni Reyna, né le 13 novembre 2002 à Sunderland en Angleterre, est un joueur international américain de soccer qui joue au poste de milieu offensif au Borussia Dortmund.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                               
+                               <tr>
+                                   <td><img src="./images/ImageVolet4/Weah.jpg" alt="Weah" class="Weah"><a>Weah</a></td>
+                                   <td>Timothy Weah, né le 22 février 2000 à New York, est un joueur international américain de soccer qui évolue au poste d'attaquant au LOSC Lille.</td>   
+                                   <td>
+                                       <input type="button" value="Editer" id="modifier" onclick="modifier(this)">
+                                   </td>
+                                   
+                                   <td>
+                                       <input type="button" value="Supprimer" id="supprimer" onclick="supprimer(this)">
+                                   </td>
+                               </tr>
+                           </table>
+                           <input type="button" id="Ajouter" value="Ajouter" onclick="AjouterNouvelleElement()" >
+                       </div>
+                    </div>
+                </div>
+                <div id="formulairedAjout">
+                    <form >
+                        <input type="radio" name="check" id="quatarcheck">Qatar
+                        <input type="radio" name="check" id="paysbascheck">Pays-Bas
+                        <input type="radio" name="check" id="englandcheck">England
+                        <input type="radio" name="check" id="usacheck">USA
+                        <input type="radio" name="check" id="maroccheck">Maroc
+    
+                        <div id="description">
+                            <label for="Description">Description Du joueur :</label>
+                            <input type="text" placeholder="Ecrire une description" id="descriptioninput">
+                        </div>
+                
+                        <div id="photo">
+                            <label for="">Chemin d'image du joueur:</label>
+                            <input type="text" id="aaa">
+                        </div>
+                        <input type="button" value="Ajouter" onclick="ajouetrJoueur()">
+                    </form>
+                </div>
+                <div class="classement" id="classement">
+                    <table id="tableclassement">
+                        <h1> groupe A </h1>
+                        <tr>
+                          <th>  Equipes </th>
+                          <th>MJ</th>
+                          <th>G</th>
+                          <th> N </th>
+                          <th> P</th>
+                          <th> BP</th>
+                          <th> BC</th>
+                          <th> DB</th>
+                          <th> Pts</th>
+                        </tr>
+                        <tr>
+                          <td>  <img src="./images/Pays bas.png" alt="logo" width="20" height="20"> Pays-bas </td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/Equateur.jpg" alt="logo" width="20" height="20">Equateur</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <td><img src="./images/Senegal.png" alt="logo" width="20" height="20">Senegal</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>-2</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                            <td> <img src="./images/Qatar Logo.jpg" alt="logo" width="20" height="20">Qatar</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>-2</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                
+                    <div id="more">  
+                        <table id="tableclassement">
+                          <h1> groupe B</h1>
+                          <tr>
+                            <th>  Equipes </th>
+                            <th>MJ</th>
+                            <th>G</th>
+                            <th> N </th>
+                            <th> P</th>
+                            <th> BP</th>
+                            <th> BC</th>
+                            <th> DB</th>
+                            <th> Pts</th>
+                          </tr>
+                          <tr>
+                            <td>  <img src="./images/england.png" alt="logo" width="18" height="20"> Angleterre </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>6</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/wales.jpg" alt="logo" width="20" height="20">wales</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/usa.png" alt="logo" width="20" height="20">USA</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                              <td> <img src="./images/iran.png" alt="logo" width="20" height="20">Iran</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>-2</td>
+                              <td>0</td>
+                          </tr>
+                        </table>
+                
+                        <table id="tableclassement">
+                          <h1> groupe C </h1>
+                          <tr>
+                            <th>  Equipes </th>
+                            <th>MJ</th>
+                            <th>G</th>
+                            <th> N </th>
+                            <th> P</th>
+                            <th> BP</th>
+                            <th> BC</th>
+                            <th> DB</th>
+                            <th> Pts</th>
+                          </tr>
+                          <tr>
+                            <td>  <img src="./images/saudi.png" alt="logo" width="19" height="20"> Arabie saoudite </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/poland.png" alt="logo" width="20" height="20">Pologne</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/mexico.png" alt="logo" width="20" height="20">Mexique</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                              <td> <img src="./images/argentine.png" alt="logo" width="20" height="20">Argentine</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>-2</td>
+                              <td>0</td>
+                          </tr>
+                        </table> 
+                      
+                        <table id="tableclassement">
+                          <h1> groupe D </h1>
+                          <tr>
+                            <th>  Equipes </th>
+                            <th>MJ</th>
+                            <th>G</th>
+                            <th> N </th>
+                            <th> P</th>
+                            <th> BP</th>
+                            <th> BC</th>
+                            <th> DB</th>
+                            <th> Pts</th>
+                          </tr>
+                          <tr>
+                            <td>  <img src="./images/france.png" alt="logo" width="19" height="20">France </td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>3</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/tunisia.png" alt="logo" width="20" height="20">Tunsie</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td><img src="./images/denmark.png" alt="logo" width="20" height="20">Danemark</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                              <td> <img src="./images/Australia.webp" alt="logo" width="20" height="20">Australie</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>4</td>
+                              <td>-3</td>
+                              <td>0</td>
+                          </tr>
+                        </table>     
+                    </div> 
+
+                    <button onclick="readmore()" id="myBtn">read more</button>  
+                </div>
+                <div class="FicheTechnique" id="FicheTechnique">
+                    <div  id="QuatarFT">
+    
+                        <div id="TarikSalman">
+                            <img src="./images/ImageVolet4/Tarik Salman.jpg" alt="Tarik Salman" class="Tarik Salman" >
+                    
+                            <h1> <center>Tarik Salman</center></h1>
+                            <p><center><i>Defenseur</i></center></p>
+            
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player2"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td id="pays">Qatar</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td id="age">24 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td id="datedenaissance">5 Decembre 1997</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td id="lieu">Al Wakrah</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td id="taille">1.79 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td id="poids">69 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+            
+                        <div id="Yousofhassan">
+                            <img src="./images/ImageVolet4/Yousof Hassan.jpg" alt="Yousof Hassan" class="Yousof Hassan" >
+                
+                            <h1> <center>Yousof Hassan</center></h1>
+                            <p><center><i>Gardien</i></center></p>
+            
+            
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr > 
+                                    <td><b>Pays:</b></td>   
+                                    <td id="pays">Qatar</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td id="age">26 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td id="datedenaissance">24 Mai 1996</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td id="lieu">Doha</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td id="taille">1.88 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td id="poids">78 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+            
+                    
+                        <div id="MussabKadir">
+                            <img src="./images/ImageVolet4/Musaab Khidir.jpg" alt="Musaab Khidir" class="Musaab Khidir" >
+                
+                            <h1> <center>Musaab Khidir</center></h1>
+                            <p><center><i>Defenseur</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player5"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td id="pays">Qatar</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td id="age">29 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td id="datedenaissance">23 Septambre 1993</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td id="taille">1.76 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td id="poids">60 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+                    
+                        <div id="AliAssadalla">
+                            <img src="./images/ImageVolet4/Ali Assadalla.png" alt="Ali Assadalla" class="Ali Assadalla" >
+                    
+                            <h1> <center>Ali Assadalla</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player7"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Qatar</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>29 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>19 Janvier 1993</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Manama</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.75 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>61 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+                    
+                        <div id="AhmedAlaa">
+                            <img src="./images/ImageVolet4/Ahmed Alaa.jpg" alt="Ahmed Alaa" class="Ahmed Alaa" >
+                    
+                            <h1> <center>Ahmed Alaa</center></h1>
+                            <p><center><i>Attaquant</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                            <tr id="player8"> 
+                                <td><b>Pays:</b></td>   
+                                <td>Qatar</td>
+                            </tr>
+                            <tr>
+                                <td><b>Age:</b></td>
+                                <td>29 ans</td>
+                            </tr>
+                            <tr>
+                                <td><b>Date De Naissance:</b></td>
+                                <td>31 janvier 1993</td>
+                            </tr>
+                            <tr>
+                                <td><b>Taille:</b></td>
+                                <td>1.76 m</td>
+                            </tr>
+                            <tr>
+                                <td><b>Poids:</b></td>
+                                <td>73 kg</td>
+                            </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+                        
+                    </div>
+            
+                    <div id="PaysbasFT">
+                        <div id="Pasveer">
+                            <img src="./images/ImageVolet4/Pasveer.jpg" alt="Pasveer" class="Pasveer" >
+                    
+                            <h1> <center>Pasveer</center></h1>
+                            <p><center><i>Gardien</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player22"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td id="pays">Pays-Bas</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td id="age">39 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td id="datedenaissance">08 novembre 1983</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td id="lieu">Enschede</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td id="taille">1.87 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td id="poids">91 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+            
+                        <div id="Ake">
+                            <img src="./images/ImageVolet4/Ake.jpg" alt="Ake" class="Ake" >
+                    
+                            <h1> <center>Ake</center></h1>
+                            <p><center><i>Défenseur</i></center></p>
+            
+            
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player19"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td id="pays">Pays-Bas</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td id="age">25 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td id="datedenaissance">18 février 1995</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td id="lieu">Gravenhage</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td id="taille">1.81 m</td>
+                                </tr>
+                                <tr >
+                                    <td><b>Poids:</b></td>
+                                    <td id="poids">71 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+            
+                        
+                        <div id="VanDijk">
+                            <img src="./images/ImageVolet4/Van Dijk.jpg" alt="Van Dijk" class="Van Dijk" >
+                    
+                            <h1> <center>Van Dijk</center></h1>
+                            <p><center><i>Defenseur</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player20"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Pays-Bas</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>31 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>08 juillet 1991</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.93 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>92 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div id="DeJonk">
+                            <img src="./images/ImageVolet4/De Jonk.jpg" alt="De Jonk" class="De Jonk" >
+                    
+                            <h1> <center>De Jong</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player16"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Pays-Bas</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>25 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>12 mai 1997</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Arkel</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.78 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>68 kg</td>
+                                </tr>
+                            </table>
+                            <input type="button" value="Modifier" onclick="modifier(this)">
+                        </div>
+                    </div>
+            
+                    <div id="EnglandFT">
+                        <div id="Bellingham">
+                            <img src="./images/ImageVolet4/Bellingham.jpg" alt="Bellingham" class="Bellingham" >
+                
+                            <h1> <center>Bellingham</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player31"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Angleterre</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>19 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>29 juin 2003</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Stourbridge</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.86 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>75 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Kane">
+                            <img src="./images/ImageVolet4/kane - Copy.jpg" alt="kane" class="kane" >
+                    
+                            <h1> <center>kane</center></h1>
+                            <p><center><i>Attaquant</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player34"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Attaquant</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>29 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>28 juillet 1993</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Londres</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.88 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>86 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div id="Fodeen">
+                            <img src="./images/ImageVolet4/Foden.jpg" alt="Foden" class="Foden" >
+                    
+                            <h1> <center>Foden</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player32"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Angleterre</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>22 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>28 mai 2000</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.71 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>70 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div id="Grealish">
+                            <img src="./images/ImageVolet4/Grealish.jpg" alt="Grealish" class="Grealish" >
+                    
+                            <h1> <center>Grealish</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player35"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Angleterre</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>27 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>10 septembre 1995 </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Birmingham</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.75 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>68 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+            
+                    <div id="MarocFT">
+                        <div id="Ziyech">
+                            <img src="./images/ImageVolet4/Ziyech (2).jpg" alt="Ziyech" class="Ziyech" >
+                    
+                            <h1> <center>Ziyech</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player42"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Maroc</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>29 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>19 mars 1993</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Dronten (HOL)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.80 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>67 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Hakimi">
+                            <img src="./images/ImageVolet4/Hakimi.jpg" alt="Hakimi" class="Hakimi" >
+                    
+                            <h1> <center>Hakimi</center></h1>
+                            <p><center><i>Défenseur</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player45"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Maroc</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>24 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>04 novembre 1998</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Madrid (ESP)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.81 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>69 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Boufal">
+                            <img src="./images/ImageVolet4/Boufal.jpg" alt="Boufal" class="Boufal" >
+                    
+                            <h1> <center>Boufal</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player41"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Maroc</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>29 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>17 septembre 1993</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.75 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>60 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div id="Amallah">
+                            <img src="./images/ImageVolet4/Amallah.jpg" alt="Amallah" class="Amallah" >
+                    
+                            <h1> <center>Amallah</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player43"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Maroc</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>26 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>15 novembre 1996</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Hautrage (BEL)</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.86 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>74 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Ounahi">
+                            <img src="./images/ImageVolet4/Ounahi.jpg" alt="Ounahi" class="Ounahi" >
+                    
+                            <h1> <center>Ounahi</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player44"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Maroc</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>22 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>19 avril 2000</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Casablanca</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.82 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>72 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+            
+                    <div id="UsaFT">
+                        <div id="Pulisic">
+                            <img src="./images/ImageVolet4/Pulisic.jpg" alt="Pulisic" class="Pulisic" >
+                    
+                            <h1> <center>Pulisic</center></h1>
+                            <p><center><i> Attaquant</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player51"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>Etats-Unis</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>24 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>18 septembre 1998</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>Hershey</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.77 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>73 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Adams">
+                            <img src="./images/ImageVolet4/Adams.jpg" alt="Adams" class="Adams" >
+                    
+                            <h1> <center>Adams</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player55"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>États-Unis</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>23 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>14 février 1999</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>New York, NY</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.80 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>68 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Reyana">
+                            <img src="./images/ImageVolet4/Reyna.jpg" alt="Reyna" class="Reyna" >
+                    
+                            <h1> <center>Reyna</center></h1>
+                            <p><center><i>Attaquant</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player52"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>États-Unis</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>20 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>13 novembre 2002</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.83 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>74 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Weah">
+                            <img src="./images/ImageVolet4/Weah.jpg" alt="Weah" class="Weah" >
+                    
+                            <h1> <center>Weah</center></h1>
+                            <p><center><i>Attaquant</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player53"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>États-Unis</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>22 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>22 février 2000</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>New York, NY</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.83 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>66 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                        <div id="Musah">
+                            <img src="./images/ImageVolet4/Musah.jpg" alt="Musah" class="Musah" >
+                    
+                            <h1> <center>Musah</center></h1>
+                            <p><center><i>Milieu</i></center></p>
+                
+                
+                            <table cellspacing="0" cellpadding="2"  width="100%" id="tb">
+                                <tr id="player54"> 
+                                    <td><b>Pays:</b></td>   
+                                    <td>États-Unis</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Age:</b></td>
+                                    <td>19 ans</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Date De Naissance:</b></td>
+                                    <td>29 novembre 2002</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Lieu De Naissance:</b></td>
+                                    <td>New York, NY</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Taille:</b></td>
+                                    <td>1.78 m</td>
+                                </tr>
+                                <tr>
+                                    <td><b>Poids:</b></td>
+                                    <td>75 kg</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="Matchs" id="Matchs">
+        
+                    <div id="matchdate1">
+                        <h1>Dimanche 20 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/qatarvsequador.png" alt="aaa">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate2">
+                        <h1>Lundi 21 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/iranvseng.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Senegal Vs Netherlands Fifa.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Wales Vs USA.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate3">
+                        <h1>Mardi 22 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/argentinevssaudi.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/denvstunisie.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Poland Vs Mexico.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/francevsaustr.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate4">
+                        <h1>Mercredi 23 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Croatia Vs Morocco Fifa World Cup 2022 PNG Image - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/gervsjapan.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Spain Vs Costa Rica.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/canadavsbelg.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate5">
+                        <h1>Jeudi 24 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Switzerland Vs Cameroon.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/South Korea Vs Uruguay.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Ghana Vs Portugal.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Serbia Vs Brazil Fifa.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate6">
+                        <h1>Vendredi 25 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Iran Vs Wales.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Qatar Vs Senegal.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/Ecuador Vs Netherlands.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/usavseng.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate7">
+                        <h1>Samedi 26 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Australia Vs Tunisia Fifa World Cup 2022 HD PNG - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Poland Vs Saudi Arabia Fifa World Cup 2022 PNG - 8192x4129.png " alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Denmark Vs France Fifa World Cup 2022 HD PNG - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]HD Mexico Vs Argentina Fifa World Cup 2022 PNG - 8192x4129.png" alt="">
+                        </div>
+                    </div>
+            
+                    <div id="matchdate8">
+                        <h1>Dimanche 27 Novembre </h1>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Japan Vs Costa Rica Fifa World Cup 2022 PNG - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Morocco Vs Belgium Fifa World Cup 2022 FREE PNG - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]HD PNG Canada Vs Croatia Fifa World Cup 2022 - 8192x4129.png" alt="">
+                        </div>
+                        <div class="box">
+                            <img id="imgMatchVolet4" src="./images/imageMatch/[CITYPNG.COM]Spain Vs Germany Fifa World Cup 2022 FREE PNG - 8192x4129.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------------------------Volet5----------------------------------------------------------------------------------------------------------------------------->
+        <div id="volet5" ondblclick="reduireVolet5()" onclick="allongerVole5()">
+            <div class="actualité">
+                <img src="./images/Hammouchie.jpg" alt="Amine Harit">
+                <p >Le Maroc et le Quatar officialisent leur coopération sécuritaire<a href="#detail1" onclick="afficherDetail1()" id="a1">Plus...</a></p>
+        
+                <img src="./images/Hors-jeu Auto.png" alt="Horsjeu auto">
+                <p>Le Hors-jeu automatique sera introduit au coupe du monde 2022. <a href="#detail2" id="a2" onclick="afficherDetail2()">Plus...</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------------------------detailVolet5----------------------------------------------------------------------------------------------------------------------------->
+    <div id="detailsActualite">
+        <div id="detail1">
+            <h1>Coopération Sécuritaire Maroc-Qatar</Maroc-Quatar></h1>
+                
+            <p>Le Maroc et Qatar ont signé, mercredi 21 septempbre, une déclaration commune pour
+                le partage d'information dans le cadre d'une collaboration sécuritaire lors de 
+                l'organiqation du prochain Mondial.
+            </p>
+            <p>
+                Cette déclaration commune a été signé par Mohamed Sitri, ambassadeur du Maroc au Quatar,
+                et le brigadier Ibrahim Khalil AL-Mohannadi, chef de comité des opération de sûrté et de sécurité de la 
+                Coupe du Monde 2022.
+            </p>
+            <p>
+                L'accord paraphé pfficialise la coopération du Maroc avec les autorité du Quatar, dans le cadre du partage d'expertise 
+                entre les deux pays dans le doomaiine de la sécurité.
+                En marge de sa participation au salon international de la sécurité et de la protection civile Milipol Qatar 2022, 
+                Abdellatif Hammouchi a visité le stade principal, qui accueillera la finale de la Coupe du monde de football 2022 
+                au Qatar.
+            </p>
+            
+            <p>
+                Le Maroc est apprécié dans la lutte contre les menaces terroristes et la cybercriminalité.
+                Hammouchi a également visité le Centre de commandement de la cybersécurité où il a tenu une 
+                séance de travail avec de hauts responsables qatariens. A l’issue de la réunion, il a été décidé 
+
+            </p>  
+        </div>
+
+        <div id="detail2">
+            <h1>Nouvelle Technologie En Coupe Du Monde 2022</h1>
+            <p>
+                Quatre ans après l'introduction de la VAR, en Russie, la Coupe du monde de 
+                football va jouer à nouveau le rôle d'incubateur d'innovations technologiqu
+                es. Lors de l'ensemble des 64 matchs qui se joueront au Qatar du 20 novembre
+                au 18 décembre, un outil capable de détecter un hors-jeu de manière semi-automatique
+                sera à disposition du corps arbitral.
+            </p>
+            <p>
+                La version 2022 de la Coupe du monde de la FIFA est décidément celles des nouveautés, 
+                aussi bien sur le plan organisationnel que sur celui des règlements. En effet, le Mondial 
+                2022 sera le premier à se tenir en terre arabe et le premier à être disputé en pleine saison 
+                footballistique en hiver (au lieu de la saison estivale). Cette édition est également la première à 
+                être jouée dans une seule ville, avec un rythme de 8 matchs tous les deux jours et un périmètre 
+                géographique limité à 75 kilomètres carrés pour un total de 1,5 million de visiteurs prévus.
+            </p>
+        </div>
+        
+    </div>
+    <!----------------------------------------------------------------------------------Volet6----------------------------------------------------------------------------------------------------------------------------->
+    <footer id="footer">
+        <div id="createur">
+            <h3> Createurs:</h3>
+            <ul>
+                <li>salma nidar.</li>
+                <li>oumaima ettassouli.</li>
+                <li>sara isaoui.</li>
+                <li>ayoub bakkali.</li>
+            </ul>
+        </div>
+        <div class="v1" id="createur">
+            <h3>Contactez-nous:</h3>
+            <ul>
+                <li> nidarsalma@etu.uae.ac.ma.</li>
+                <li> oumaimaettassouli@etu.uae.ac.ma.</li>
+                <li> saraisaoui@etu.uae.ac.ma.</li>
+                <li> ayoub.bakkali1@etu.uae.ac.ma.</li>
+            </ul>
+        </div>
+        <div class="v1">
+            <h3> Pour plus d'infos:</h3>
+            <a href="https://www.aljazeera.com/qatar-world-cup-2022/">https://www.aljazeera.com/qatar-world-cup-2022/ </a>
+            <a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022">https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022</a>
+            <a href="https://en.wikipedia.org/wiki/2022_FIFA_World_Cup">https://en.wikipedia.org/wiki/2022_FIFA_World_Cup</a>
+            <img src="./images/logo.png" width="150" height="150" id="logo">
+        </div>
+        <div class="v2">
+            <h3> Encadré par :</h3>
+            <ul>
+                <li>PR.M.AIT KBIR</li>
+            </ul>
+            <p id="buttom" >© QATAR WORLD CUP 2022.</p> <img src="./images/fsttanger.png" width="100"height="100" id="fstt">
+        </div>
+    </footer>
+</body>
+
+</html>
